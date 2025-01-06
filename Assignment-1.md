@@ -3,20 +3,20 @@
 
 Step 1: Create the database  
 
-     use codinggita
+    use codinggita
 
 Step 2: Create the students collection      
 
-     db.createCollection("students");
+    db.createCollection("students");
 
 Step 3: Create the courses collection    
 
-     db.createCollection("courses");
+    db.createCollection("courses");
  
 Step 4: Insert sample data into the students collection 
  
 
-     db.students.insertMany([
+    db.students.insertMany([
     { 
     "name": "Jenil",
     "rollNumber": 101,
@@ -81,41 +81,41 @@ Step 5: Insert sample data into the courses collection
 
  Step 7: Query students based on year    
   
-    `db.students.find({ "year": 2 });`
+    db.students.find({ "year": 2 });
 
  Step 8: Query students by course enrollment   
 
-    `db.students.find({ "coursesEnrolled":  "CS101" });`
+    db.students.find({ "coursesEnrolled":  "CS101" });
 
 
 
 
  Step 9: Update a student’s courses
 
-    `db.students.updateOne(
+    db.students.updateOne(
     { "name": "Arjun" },
     { $push: { "coursesEnrolled": "CS102" } }
-    );`
+    );
 
 
 Step 10: Update a course instructor If Prof. Gupta
 
-     `db.courses.updateOne(
+     db.courses.updateOne(
     { "courseCode": "CS102" },
     { $set: { "instructor": "Prof. Mehta" } }
-    );`
+    );
 
    
 
 
  Step 11: Delete a student record 
 
-     `db.students.deleteOne({ "name": "Arjun" });`
+     db.students.deleteOne({ "name": "Arjun" });
 
 
 Step 2: Delete all students from a specific department
 
-    `db.students.deleteMany({ "department": "Electrical Engineering" });`
+    db.students.deleteMany({ "department": "Electrical Engineering" });
    
 
 

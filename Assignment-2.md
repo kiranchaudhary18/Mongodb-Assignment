@@ -177,7 +177,8 @@ Task 13: Delete all students from a department
 Task 14: Retrieve all topics for a subject
 
     db.subjects.findOne(
-    {"subjectsName":"MognoDB"})
+    {"subjectsName":"MognoDB"},
+    )
 
 Task 15: Count the number of subjects in which a student is enrolled  
   
